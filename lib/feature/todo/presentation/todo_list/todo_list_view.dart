@@ -54,7 +54,9 @@ class _TodoListViewState extends State<TodoListView> {
           final todoIndex = _todoModel[index];
           return Card(
             child: ListTile(
-              leading: const CircleAvatar(),
+              leading: CircleAvatar(
+                child: Text("${index + 1}"),
+              ),
               title: Text(todoIndex["title"]),
               subtitle: Text(todoIndex["description"]),
               trailing: Chip(
